@@ -1,0 +1,20 @@
+<launch>
+
+    <node type="talker" pkg="practice" name="publisher1" output="screen" >
+        <remap from="counter" to="counter_1"/>
+    </node>
+    <!-- publish 原本發佈到"counter"，更改為"counter_1" -->
+        
+    <node type="listener" pkg="practice" name="subscriber1" output="screen" >
+        <remap from="counter" to="counter_1"/>
+    </node>
+    <!-- subsrciber 原本接收到"counter"，更改為"counter_1" -->
+    <node type="listener" pkg="practice" name="subscriber2" output="screen" >
+        <remap from="counter" to="counter_1"/>
+    </node>
+
+    <include file="$(find practice)/launch/included.launch" >
+        <arg name="velocity" default="100" />
+    </include>
+
+</launch>

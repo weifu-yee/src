@@ -1,0 +1,10 @@
+<launch>
+    
+    <!-- declare arg to be passed in -->
+    <arg name="velocity" /> 
+    <node pkg="turtlesim" type="turtlesim_node" name="turtle" output="screen" />
+
+    <!-- read value of arg -->
+    <param name="param" value="$(arg velocity)"/>   <!-- $() 是獲取變量的意思 -->
+    
+</launch>

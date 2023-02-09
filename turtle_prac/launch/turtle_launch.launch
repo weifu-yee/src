@@ -1,0 +1,9 @@
+<launch>
+
+    <rosparam command="load" file="$(find turtle_prac)/params/turtle.yaml" />
+    <node type="turtlesim_node" pkg="turtlesim" name="turtle" output="screen" />
+    <node type="turtle_launch" pkg="turtle_prac" name="turtle_launch1" output="screen" >
+        <remap from="abc" to="turtle1/cmd_vel"/>
+    </node>
+
+</launch>

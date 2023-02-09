@@ -1,0 +1,7 @@
+<launch>
+
+    <!-- <rosparam command="delete" param="/param_name" />    -->
+    <rosparam command="load" file="$(find practice/params/practice.yaml)" />
+    <rosparam command="dump" file="$(find practice/params/practice.yaml)" />
+
+</lanch>
